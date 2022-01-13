@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/ShinyACash/HiddenHunt#readme",
   "dependencies": {
-    "discord.js": "^13.5.1"
+    "discord.js": "^12.4.1"
   }
 }
