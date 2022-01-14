@@ -76,7 +76,7 @@ client.on('message', async(msg) => {
             else if(s_msg.includes("-enc")){
 
             }
-            else{
+            else if(s_msg){
                 msg.channel.send("Please specify an argument. [`.search -s` for syntax]");
             }
             break;
