@@ -136,7 +136,7 @@ client.on('message', async(msg) => {
                         cm1 = true;
                     }
                 }
-                else if(g_msg){
+                else{
                     msg.channel.send("Finding file and getting it...").then((msg) => {
                         setTimeout(async() => {
                             msg.edit("Found![type: install module] Please use `-i` argument for installing the module.");
@@ -145,7 +145,7 @@ client.on('message', async(msg) => {
                 }
             }
 
-            else{
+            else if (g_msg){
                 msg.channel.send("Finding file and getting it").then((msg) => {
                     setTimeout(async() => {
                         msg.edit("Failed! The file code given does not exist.");
