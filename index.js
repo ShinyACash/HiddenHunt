@@ -32,7 +32,7 @@ client.on('message', async(msg) => {
                 .setTitle("Commands")
                 .addField("`search`", "Searches for files in directories and informs if files of that name or type exist.", false)
                 .addField("`getfile`", "Provides file attachments associated with their specific codes.", false)
-                .addField("`hexstr`", "Converts hexadecimal to string and detects hints from the strings", false)
+                .addField("`link`", "Converts strings (string means a group of letters, example: `hello`) to links only if it detects any links from the given string", false)
                 .setFooter("You can use `-s` as an arguement for the command you need the syntax for.\nIt is advised to install all modules again everyday since I reset everyday for security purposes.")
                 msg.channel.send(cmd_em1);
             }
@@ -61,8 +61,13 @@ client.on('message', async(msg) => {
                 if(s_msg.includes("examplefile/element")){
                     msg.channel.send("Bro that was a damn EXAMPLE, don't waste my processing power, my d's already taking a lot of processing power.");
                 }
-                if(s_msg.includes("test")){
-                    msg.channel.send("aight it works.");
+                if(s_msg.includes("my dick") || s_msg.includes("mydick") || s_msg.includes("your dick") || s_msg.includes("yourdick")){
+                    msg.channel.send("really bro? you are gonna search my 14-inch D for hints?").then((msg) => {
+                        setTimeout(async() => {
+                            msg.channel.send("Welp guess what? nothing found. Not cool fam not cool.");
+                        }, 1000)
+                    });
+                    msg.author.send("Achievement Unlocked!\nSearching Jonah's D for goods.");
                 }
             }
             else if(s_msg.includes("-i")){
@@ -70,6 +75,9 @@ client.on('message', async(msg) => {
             }
             else if(s_msg.includes("-enc")){
 
+            }
+            else{
+                msg.channel.send("Please specify an argument. [`.search -s` for syntax]");
             }
             break;
         case "getfile":
@@ -145,17 +153,8 @@ client.on('message', async(msg) => {
                 });
             }
             break;
-        case "hexstr":
-            var hex  = g_msg;
-	        var str = '';
-	        for (var n = 0; n < Math.floor(hex.length); n += 2) {
-		        str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
-	        }
-            msg.channel.send("Processing...").then((msg) => {
-                setTimeout(async() => {
-                    msg.edit(`String: ${str}`);
-                }, 3000)
-            });
+        case "link":
+
             break;
     }
 
