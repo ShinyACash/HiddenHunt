@@ -1,6 +1,8 @@
+const { atob } = require('buffer');
 const Discord = require('discord.js');
 const client = new Discord.Client;
 const fs = require('fs');
+const { STATUS_CODES } = require('http');
 let cm1 = false;
 
 
@@ -61,7 +63,7 @@ client.on('message', async(msg) => {
                 if(s_msg.includes("examplefile/element")){
                     msg.channel.send("Bro that was a damn EXAMPLE, don't waste my processing power, my d's already taking a lot of processing power.");
                 }
-                if(s_msg.includes("my dick") || s_msg.includes("mydick") || s_msg.includes("your dick") || s_msg.includes("yourdick")){
+                if(s_msg.includes("my dick") || s_msg.includes("mydick") || s_msg.includes("your dick") || s_msg.includes("yourdick") || s_msg.includes("joe dick")){
                     msg.channel.send("really bro? you are gonna search my 14-inch D for hints?").then((msg) => {
                         setTimeout(async() => {
                             msg.channel.send("Welp guess what? nothing found. Not cool fam not cool.");
@@ -161,7 +163,27 @@ client.on('message', async(msg) => {
             }
             break;
         case "link":
+            var l_msg = args.splice(0).join(' ');
+            if (!l_msg || l_msg === '-s'){
+                let l_syntax = new Discord.MessageEmbed()
+                .setColor("#58c9d1")
+                .setTitle("Link command Syntax")
+                .addField("Syntax: ", "`.link string[or -s]` where you input some sort of string and the result might return a link if encoded into it.", false)
+                .addField("Args (Arguments)[not required]:", "`-s` for syntax", false)
+                msg.channel.send(l_syntax);
+            }
 
+            else if (l_msg.includes("code.git")){
+
+            }
+            break;
+        case "dcode":
+            var d_msg = args.splice(0).join(' ');
+            var d_ecode = d_msg;
+
+            var d_code = Buffer.from(d_ecode, 'base64');
+
+            msg.channel.send(`Result: "${d_code}"`);
             break;
     }
 
