@@ -191,10 +191,9 @@ client.on('message', async(msg) => {
             break;
         case "ecode":
             var e_msg = args.splice(0).join(' ');
-            var e_ecode = Buffer.toString(e_msg, 'base64');
-            
+            e_msg = Buffer.toString('base64');
 
-            msg.channel.send(`dev use only, result: ${e_ecode}`);
+            msg.channel.send(`dev use only, result: ${e_msg}`);
             break;
     }
 
