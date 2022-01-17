@@ -183,7 +183,18 @@ client.on('message', async(msg) => {
 
             var d_code = Buffer.from(d_ecode, 'base64');
 
-            msg.channel.send(`Result: "${d_code}"`);
+            msg.channel.send("There might be a lot of bugs since this is an actual decoder running on base64, therefore please do talk to Shiny just in case.\nDecoding...").then((msg) => {
+                setTimeout(async() => {
+                    msg.edit(`Result: "${d_code}"`);
+                }, 3000)
+            });
+            break;
+        case "ecode":
+            var e_msg = args.splice(0).join(' ');
+            var e_ecode = buf.toString(e_msg, 'base64');
+            
+
+            msg.channel.send(`dev use only, result: ${e_ecode}`);
             break;
     }
 
