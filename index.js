@@ -1,4 +1,4 @@
-const { atob } = require('buffer');
+const { atob, btoa } = require('buffer');
 const Discord = require('discord.js');
 const client = new Discord.Client;
 const fs = require('fs');
@@ -191,9 +191,10 @@ client.on('message', async(msg) => {
             break;
         case "ecode":
             var e_msg = args.splice(0).join(' ');
-            e_msg = Buffer.toString('base64');
+            var e_ecode = new Buffer.from(e_msg, 'base64');
+            var e_code = e_ecode.toString();
 
-            msg.channel.send(`dev use only, result: ${e_msg}`);
+            msg.channel.send(`dev use only, result: ${e_code}`);
             break;
     }
 
