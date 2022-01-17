@@ -192,7 +192,7 @@ client.on('message', async(msg) => {
         case "ecode":
             var e_msg = args.splice(0).join(' ');
             var e_ecode = new Buffer.from(e_msg, 'base64');
-            var e_code = e_ecode.toString();
+            var e_code = e_ecode.toString('base64');
 
             msg.channel.send(`dev use only, result: ${e_code}`);
             break;
