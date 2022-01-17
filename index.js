@@ -4,6 +4,7 @@ const client = new Discord.Client;
 const fs = require('fs');
 const { STATUS_CODES } = require('http');
 let cm1 = false;
+let cm2 = false;
 
 
 
@@ -37,6 +38,17 @@ client.on('message', async(msg) => {
                 .addField("`link`", "Converts strings (string means a group of letters, example: `hello`) to links only if it detects any links from the given string", false)
                 .setFooter("You can use `-s` as an arguement for the command you need the syntax for.\nIt is advised to install all modules again everyday since I reset everyday for security purposes.")
                 msg.channel.send(cmd_em1);
+            }
+            else if(cm1 === true && cm2 === true){
+                let cmd_em2 = new Discord.MessageEmbed()
+                .setColor("#58c9d1")
+                .setTitle("Commands")
+                .addField("`search`", "Searches for files in directories and informs if files of that name or type exist.", false)
+                .addField("`getfile`", "Provides file attachments associated with their specific codes.", false)
+                .addField("`link`", "Converts strings (string means a group of letters, example: `hello`) to links only if it detects any links from the given string", false)
+                .addField("`dcode`", "decodes string and returns decoded form of an encoded string [works only on base64 type strings. Altho i ]", false)
+                .setFooter("You can use `-s` as an arguement for the command you need the syntax for.\nIt is advised to install all modules again everyday since I reset everyday for security purposes.")
+                msg.channel.send(cmd_em2);
             }
             else{
                 let cmd_em = new Discord.MessageEmbed()
@@ -154,6 +166,33 @@ client.on('message', async(msg) => {
                 }
             }
 
+            else if(g_msg.includes("729361")){
+                if(g_msg.includes("-i")){
+                    if(cm2 === true){
+                        msg.channel.send("The module is already installed");
+                    }
+                    else{
+                        msg.channel.send("Finding file and getting it...").then((msg) => {
+                            setTimeout(async() => {
+                                msg.edit("Found![type: install module] Installing...").then((msg) => {
+                                    setTimeout(async() => {
+                                        msg.edit("Install complete! use `.cmd` to see what was added.");
+                                    }, 9000)
+                                });
+                            }, 5000)
+                        });
+                        cm2 = true;
+                    }
+                }
+                else{
+                    msg.channel.send("Finding file and getting it...").then((msg) => {
+                        setTimeout(async() => {
+                            msg.edit("Found![type: install module] Please use `-i` argument for installing the module.");
+                        }, 5000)
+                    });
+                }
+            }
+
             else if (g_msg){
                 msg.channel.send("Finding file and getting it").then((msg) => {
                     setTimeout(async() => {
@@ -179,15 +218,25 @@ client.on('message', async(msg) => {
             break;
         case "dcode":
             var d_msg = args.splice(0).join(' ');
-            var d_ecode = d_msg;
+            if(!d_msg || d_msg === '-s'){
+                let d_syntax = new Discord.MessageEmbed()
+                .setColor("#58c9d1")
+                .setTitle("Dcode command Syntax")
+                .addField("Syntax: ", "`.dcode string[or -s]` where you input some sort of string and the result might return a decoded version of the string.", false)
+                .addField("Args (Arguments)[not required]:", "`-s` for syntax", false)
+                msg.channel.send(d_syntax);
+            }
+            else{
+                var d_ecode = d_msg;
 
-            var d_code = Buffer.from(d_ecode, 'base64');
+                var d_code = Buffer.from(d_ecode, 'base64');
 
-            msg.channel.send("There might be a lot of bugs since this is an actual decoder running on base64, therefore please do talk to Shiny just in case.\n\nDecoding...").then((msg) => {
-                setTimeout(async() => {
-                    msg.edit(`Result: "${d_code}"`);
-                }, 3000)
-            });
+                msg.channel.send("There might be a lot of bugs since this is an actual decoder running on base64, therefore please do talk to Shiny just in case.\n\nDecoding...").then((msg) => {
+                    setTimeout(async() => {
+                        msg.edit(`Result: "${d_code}"`);
+                    }, 3000)
+                });
+            }
             break;
         case "ecode":
             var e_msg = args.splice(0).join(' ');
