@@ -183,7 +183,7 @@ client.on('message', async(msg) => {
 
             var d_code = Buffer.from(d_ecode, 'base64');
 
-            msg.channel.send("There might be a lot of bugs since this is an actual decoder running on base64, therefore please do talk to Shiny just in case.\nDecoding...").then((msg) => {
+            msg.channel.send("There might be a lot of bugs since this is an actual decoder running on base64, therefore please do talk to Shiny just in case.\n\nDecoding...").then((msg) => {
                 setTimeout(async() => {
                     msg.edit(`Result: "${d_code}"`);
                 }, 3000)
