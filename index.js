@@ -69,6 +69,13 @@ client.on('message', async(msg) => {
                     });
                     msg.author.send("Achievement Unlocked!\nSearching Jonah's D for goods.");
                 }
+                if(s_msg.includes("code.git")){
+                    msg.channel.send("Finding...").then((msg) => {
+                        setTimeout(async() => {
+                            msg.channel.send("Result: Maybe this is some type of link?");
+                        }, 4000)
+                    });
+                }
             }
             else if(s_msg.includes("-i")){
 
