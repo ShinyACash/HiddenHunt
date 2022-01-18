@@ -202,6 +202,7 @@ client.on('message', async(msg) => {
             }
             break;
         case "link":
+            if(!cm1 === true) return msg.channel.send("Huh? I don't have such a command, maybe try finding an install module for it?");
             var l_msg = args.splice(0).join(' ');
             if (!l_msg || l_msg === '-s'){
                 let l_syntax = new Discord.MessageEmbed()
@@ -213,10 +214,19 @@ client.on('message', async(msg) => {
             }
 
             else if (l_msg.includes("code.git")){
-
+                msg.channel.send("Finding links...").then((msg) => {
+                    setTimeout(async() => {
+                        let link_em = new Discord.MessageEmbed()
+                        .setColor("#58c9d1")
+                        .setTitle("Found!")
+                        .addField("Link:", "Le link[https://github.com/Jonahmadich/codefiles]", false)
+                        msg.edit(link_em);
+                    }, 3000)
+                });
             }
             break;
         case "dcode":
+            if(!cm2 === true) return msg.channel.send("Huh? I don't have such a command, maybe try finding an install module for it?");
             var d_msg = args.splice(0).join(' ');
             if(!d_msg || d_msg === '-s'){
                 let d_syntax = new Discord.MessageEmbed()
