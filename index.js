@@ -220,11 +220,12 @@ client.on('message', async(msg) => {
                 .setDescription("Please wait till I find someting...")
                 msg.channel.send(link_m).then(() => {
                     setTimeout(async() => {
-                        let link_em = new Discord.MessageEmbed()
+                        msg.delete();
+                        let link_m = new Discord.MessageEmbed()
                         .setColor("#58c9d1")
                         .setTitle("Found!")
                         .addField("Link:", "Le link [https://github.com/Jonahmadich/codefiles]", false)
-                        msg.edit(link_em);
+                        msg.channel.send(link_m);
                     }, 3000)
                 });
             }
