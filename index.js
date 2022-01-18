@@ -5,6 +5,8 @@ const fs = require('fs');
 const { STATUS_CODES } = require('http');
 let cm1 = false;
 let cm2 = false;
+let em1 = false;
+let em2 = false;
 
 
 
@@ -29,7 +31,7 @@ client.on('message', async(msg) => {
             });
             break;
         case "cmd":
-            if(cm1 === true){
+            if(em1 === true){
                 let cmd_em1 = new Discord.MessageEmbed()
                 .setColor("#58c9d1")
                 .setTitle("Commands")
@@ -39,7 +41,7 @@ client.on('message', async(msg) => {
                 .setFooter("You can use `-s` as an arguement for the command you need the syntax for.\nIt is advised to install all modules again everyday since I reset everyday for security purposes.")
                 msg.channel.send(cmd_em1);
             }
-            else if(cm1 === true && cm2 === true){
+            else if(em2 === true){
                 let cmd_em2 = new Discord.MessageEmbed()
                 .setColor("#58c9d1")
                 .setTitle("Commands")
@@ -155,6 +157,7 @@ client.on('message', async(msg) => {
                             }, 5000)
                         });
                         cm1 = true;
+                        em1 = true;
                     }
                 }
                 else{
@@ -182,6 +185,8 @@ client.on('message', async(msg) => {
                             }, 5000)
                         });
                         cm2 = true;
+                        em1 = false;
+                        em2 = true;
                     }
                 }
                 else{
@@ -214,11 +219,7 @@ client.on('message', async(msg) => {
             }
 
             else if (l_msg.includes("code.git")){
-                let link_m = new Discord.MessageEmbed()
-                .setColor("#58c9d1")
-                .setTitle("Finding")
-                .setDescription("Please wait till I find someting...")
-                msg.channel.send(link_m).then(() => {
+                msg.channel.send("Please wait till i find something.\nFinding...").then(() => {
                     setTimeout(async() => {
                         msg.delete();
                         let link_em = new Discord.MessageEmbed()
