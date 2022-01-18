@@ -221,11 +221,11 @@ client.on('message', async(msg) => {
                 msg.channel.send(link_m).then(() => {
                     setTimeout(async() => {
                         msg.delete();
-                        let link_m = new Discord.MessageEmbed()
+                        let link_em = new Discord.MessageEmbed()
                         .setColor("#58c9d1")
                         .setTitle("Found!")
-                        .addField("Link:", "Le link [https://github.com/Jonahmadich/codefiles]", false)
-                        msg.channel.send(link_m);
+                        .addField("Link:", "[Le link](https://github.com/Jonahmadich/codefiles)", false)
+                        msg.channel.send(link_em);
                     }, 3000)
                 });
             }
