@@ -86,7 +86,7 @@ client.on('message', async(msg) => {
                 if(s_msg.includes("code.git")){
                     msg.channel.send("Finding...").then((msg) => {
                         setTimeout(async() => {
-                            msg.channel.send("Result: Maybe this is some type of link?");
+                            msg.edit("Result: Maybe this is some type of link?");
                         }, 4000)
                     });
                 }
@@ -214,12 +214,16 @@ client.on('message', async(msg) => {
             }
 
             else if (l_msg.includes("code.git")){
-                msg.channel.send("Finding links...").then((msg) => {
+                let link_m = new Discord.MessageEmbed()
+                .setColor("#58c9d1")
+                .setTitle("Finding")
+                .setDescription("Please wait till I find someting...")
+                msg.channel.send(link_m).then(() => {
                     setTimeout(async() => {
                         let link_em = new Discord.MessageEmbed()
                         .setColor("#58c9d1")
                         .setTitle("Found!")
-                        .addField("Link:", "Le link[https://github.com/Jonahmadich/codefiles]", false)
+                        .addField("Link:", "Le link [https://github.com/Jonahmadich/codefiles]", false)
                         msg.edit(link_em);
                     }, 3000)
                 });
