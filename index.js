@@ -48,7 +48,7 @@ client.on('message', async(msg) => {
                 .addField("`search`", "Searches for files in directories and informs if files of that name or type exist.", false)
                 .addField("`getfile`", "Provides file attachments associated with their specific codes.", false)
                 .addField("`link`", "Converts strings (string means a group of letters, example: `hello`) to links only if it detects any links from the given string", false)
-                .addField("`dcode`", "decodes string and returns decoded form of an encoded string [works only on base64 type strings. Altho i ]", false)
+                .addField("`dcode`", "decodes string and returns decoded form of an encoded string [works only on base64 type strings. Altho it's gonna give fucked up shit with random inputs, so use caution.]", false)
                 .setFooter("You can use `-s` as an arguement for the command you need the syntax for.\nIt is advised to install all modules again everyday since I reset everyday for security purposes.")
                 msg.channel.send(cmd_em2);
             }
