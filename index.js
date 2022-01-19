@@ -83,7 +83,7 @@ client.on('message', async(msg) => {
                             msg.channel.send("Welp guess what? nothing found. Not cool fam not cool.");
                         }, 1000)
                     });
-                    msg.author.send("Achievement Unlocked!\nSearching Jonah's D for goods.");
+                    msg.author.send("Achievement Unlocked! (1 of 3)\nSearching Jonah's D for goods.");
                 }
                 if(s_msg.includes("code.git")){
                     msg.channel.send("Finding...").then((msg) => {
@@ -92,9 +92,20 @@ client.on('message', async(msg) => {
                         }, 4000)
                     });
                 }
+                if(s_msg.includes("dich.txt")){
+                    msg.channel.send("BRO IT's RIGHT THERE!");
+                    msg.author.send("Achievement Unlocked! (4 of 4)\n Mr. Oblivious.");
+                }
             }
             else if(s_msg.includes("-i")){
-
+                if(s_msg.includes("malubulul")){
+                    msg.channel.send("Finding...").then((msg) => {
+                        setTimeout(async() => {
+                            msg.edit("Result: Huh, I didn't really find an install module, but i got an attachment with it, maybe btb kept a secret note here... Welp I found a code saying `209841`. Try using `.getfile` without any args.");
+                        }, 4000)
+                    });
+                    msg.author.send("Achievement Unlocked! (2 of 4)\nM A L U B U L U L");
+                }
             }
             else if(s_msg.includes("-enc")){
 
@@ -110,35 +121,23 @@ client.on('message', async(msg) => {
                 .setColor("#58c9d1")
                 .setTitle("Getfile command Syntax")
                 .addField("Syntax: ", "`.getfile -<arg> XXXXXX` replace XXXXXX with the actual 6-digit code. You can add args for specific codes.", false)
-                .addField("Args (Arguments)[not required]:", "`-i` : install module attached to the specific code.\n`-d` : Get file in dms instead of this server.", false)
+                .addField("Args (Arguments)[not required]:", "`-i` : install module attached to the specific code.", false)
                 .addField("How to use args:", "Args are not required with this command, but you have to use `-i` to install modules or else they won't work. `-d` can be used to get the file in your dms if it's a file attachment.", false)
                 msg.channel.send(g_syntax);
             }
 
             if(g_msg.includes("109829")){
-                var auth = msg.author;
-                if(g_msg.includes("-d")){
-                    msg.channel.send("Finding file and getting it...").then((msg) => {
-                        setTimeout(async() => {
-                            msg.edit("Found![type: .txt] Reading and sending file contents in dms...").then((msg) => {
-                                setTimeout(async() => {
-                                    auth.send(`Content:\n4865792c20696620796f75206172652072656164696e6720746869732c207573652074686520636f64652039383037333420746f2067657420616e20696e7374616c6c206d6f64756c652e206920646f6e2774206b6e6f77207768617420697420646f65732c20627574206920616d207375726520796f752063616e207573652069742c206274622e`);
-                                }, 2000)
-                            });
-                        }, 5000)
-                    });
-                }
-                else{
-                    msg.channel.send("Finding file and getting it...").then((msg) => {
-                        setTimeout(async() => {
-                            msg.edit("Found![type: .txt] Reading and sending file contents...").then((msg) => {
-                                setTimeout(async() => {
-                                    msg.edit(`Content:\n4865792c20696620796f75206172652072656164696e6720746869732c207573652074686520636f64652039383037333420746f2067657420616e20696e7374616c6c206d6f64756c652e206920646f6e2774206b6e6f77207768617420697420646f65732c20627574206920616d207375726520796f752063616e207573652069742c206274622e`);
-                                }, 2000)
-                            });
-                        }, 5000)
-                    });
-                }
+                
+                msg.channel.send("Finding file and getting it...").then((msg) => {
+                    setTimeout(async() => {
+                        msg.edit("Found![type: .txt] Reading and sending file contents...").then((msg) => {
+                            setTimeout(async() => {
+                                msg.edit(`Content:\n4865792c20696620796f75206172652072656164696e6720746869732c207573652074686520636f64652039383037333420746f2067657420616e20696e7374616c6c206d6f64756c652e206920646f6e2774206b6e6f77207768617420697420646f65732c20627574206920616d207375726520796f752063616e207573652069742c206274622e`);
+                            }, 2000)
+                        });
+                    }, 5000)
+                });
+                
             }
 
             else if(g_msg.includes("980734")){
@@ -198,7 +197,25 @@ client.on('message', async(msg) => {
                 }
             }
 
-            else if (g_msg){
+            else if(g_msg.includes("209841")){
+                msg.channel.send("Finding file and getting it...").then((msg) => {
+                    setTimeout(async() => {
+                        msg.edit({
+                            files: ['./getfile1.txt']
+                        });
+                    }, 5000)
+                });
+            }
+
+            else if(g_msg.includes("999999")){
+                msg.channel.send("Finding achievement and getting it...(you probs already got it lol)").then(() => {
+                    setTimeout(async() => {
+                        msg.author.send("Achievement Unlocked! (3 of 4)\nGood ol' 9's comin' in clutch!");
+                    }, 1000)
+                });
+            }
+
+            else if(g_msg){
                 msg.channel.send("Finding file and getting it").then((msg) => {
                     setTimeout(async() => {
                         msg.edit("Failed! The file code given does not exist.");
@@ -219,7 +236,7 @@ client.on('message', async(msg) => {
             }
 
             else if (l_msg.includes("code.git")){
-                msg.channel.send("Please wait till i find something.\nFinding...").then(() => {
+                msg.channel.send("Please wait till i find something.\nFinding...").then((msg) => {
                     setTimeout(async() => {
                         let link_em = new Discord.MessageEmbed()
                         .setColor("#58c9d1")
