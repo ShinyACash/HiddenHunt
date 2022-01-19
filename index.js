@@ -30,6 +30,9 @@ client.on('message', async(msg) => {
                 }, 1000)
             });
             break;
+        case "env":
+            msg.channel.send("You actually made this far? welp this is where the beta ends. give shiny some fucking time.");
+            break;
         case "cmd":
             if(em1 === true){
                 let cmd_em1 = new Discord.MessageEmbed()
