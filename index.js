@@ -200,7 +200,8 @@ client.on('message', async(msg) => {
             else if(g_msg.includes("209841")){
                 msg.channel.send("Finding file and getting it...").then((msg) => {
                     setTimeout(async() => {
-                        msg.edit({
+                        msg.delete();
+                        msg.channel.send({
                             files: ['./getfile1.txt']
                         });
                     }, 5000)
