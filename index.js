@@ -221,12 +221,11 @@ client.on('message', async(msg) => {
             else if (l_msg.includes("code.git")){
                 msg.channel.send("Please wait till i find something.\nFinding...").then(() => {
                     setTimeout(async() => {
-                        msg.delete();
                         let link_em = new Discord.MessageEmbed()
                         .setColor("#58c9d1")
                         .setTitle("Found!")
                         .addField("Link:", "[Le link](https://github.com/Jonahmadich/codefiles)", false)
-                        msg.channel.send(link_em);
+                        msg.edit(link_em);
                     }, 3000)
                 });
             }
