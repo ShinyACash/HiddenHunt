@@ -176,7 +176,7 @@ client.on('message', async(msg) => {
                 }
             }
 
-            else if(g_msg.includes("729361")){
+            else if(g_msg.includes("812346")){
                 if(g_msg.includes("-i")){
                     if(cm2 === true){
                         msg.channel.send("The module is already installed");
