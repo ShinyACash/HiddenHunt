@@ -79,22 +79,22 @@ client.on('message', async(msg) => {
                 if(s_msg.includes("examplefile/element")){
                     msg.channel.send("Bro that was a damn EXAMPLE, don't waste my processing power, my d's already taking a lot of processing power.");
                 }
-                if(s_msg.includes("my dick") || s_msg.includes("mydick") || s_msg.includes("your dick") || s_msg.includes("yourdick") || s_msg.includes("joe dick")){
+                else if(s_msg.includes("my dick") || s_msg.includes("mydick") || s_msg.includes("your dick") || s_msg.includes("yourdick") || s_msg.includes("joe dick")){
                     msg.channel.send("really bro? you are gonna search my 14-inch D for hints?").then((msg) => {
                         setTimeout(async() => {
                             msg.channel.send("Welp guess what? nothing found. Not cool fam not cool.");
                         }, 1000)
                     });
-                    msg.author.send("Achievement Unlocked! (1 of 3)\nSearching Jonah's D for goods.");
+                    msg.author.send("Achievement Unlocked! (1 of 4)\nSearching Jonah's D for goods.");
                 }
-                if(s_msg.includes("code.git")){
+                else if(s_msg.includes("code.git")){
                     msg.channel.send("Finding...").then((msg) => {
                         setTimeout(async() => {
                             msg.edit("Result: Maybe this is some type of link?");
                         }, 4000)
                     });
                 }
-                if(s_msg.includes("dich.txt")){
+                else if(s_msg.includes("dich.txt")){
                     msg.channel.send("BRO IT's RIGHT THERE!");
                     msg.author.send("Achievement Unlocked! (4 of 4)\n Mr. Oblivious.");
                 }
