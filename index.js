@@ -98,6 +98,9 @@ client.on('message', async(msg) => {
                     msg.channel.send("BRO IT's RIGHT THERE!");
                     msg.author.send("Achievement Unlocked! (4 of 4)\n Mr. Oblivious.");
                 }
+                else{
+                    msg.channel.send("Couldn't find shit there.");
+                }
             }
             else if(s_msg.includes("-i")){
                 if(s_msg.includes("malubulul")){
@@ -107,6 +110,9 @@ client.on('message', async(msg) => {
                         }, 4000)
                     });
                     msg.author.send("Achievement Unlocked! (2 of 4)\nM A L U B U L U L");
+                }
+                else{
+                    msg.channel.send("Couldn't find shit there.");
                 }
             }
             else if(s_msg.includes("-enc")){
