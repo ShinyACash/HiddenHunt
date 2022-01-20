@@ -342,7 +342,7 @@ client.on('message', async(msg) => {
             else if(msg.content.includes("nigga")){
                 msg.author.send("Achievement Unlocked!\nNigga. nigga nigga. nigg nigg nigg. nig. nig, nigga nigg nigg. wanna NIGG?! Nigga is the answer to everything, nigga is peace, NIGGA!")
             }
-            else if(msg.includes("help")){
+            else if(mesg.includes("help")){
                 msg.channel.send("CMDs:\ncore\nmod\nhelp");
             }
             else{
