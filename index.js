@@ -31,6 +31,7 @@ client.on('message', async(msg) => {
             break;
         case "env":
             msg.channel.send("You actually made this far? welp this is where the beta ends. Give shiny some fucking time. Why not try and find all achievements till then?");
+            //env? oh...the forbidden command. bold of you to assume i have the power to use it. Maybe i can, if you install some kinda mod into me.
             break;
         case "cmd":
             if(em1 === true){
@@ -224,6 +225,14 @@ client.on('message', async(msg) => {
                 });
             }
 
+            else if(g_msg.includes("69420")){
+                msg.channel.send("Findin- nice.").then(() => {
+                    setTimeout(async() => {
+                        msg.author.send("Achievement Unlocked! (5 of 5)\n;)) getfile kinda sus");
+                    }, 1000)
+                });
+            }
+
             else if(g_msg){
                 msg.channel.send("Finding file and getting it").then((msg) => {
                     setTimeout(async() => {
@@ -245,7 +254,7 @@ client.on('message', async(msg) => {
             }
 
             else if (l_msg.includes("code.git")){
-                msg.channel.send("Please wait till i find something.\nFinding...").then((msg) => {
+                msg.channel.send("Please wait till I find something.").then((msg) => {
                     setTimeout(async() => {
                         let link_em = new Discord.MessageEmbed()
                         .setColor("#58c9d1")
@@ -280,12 +289,66 @@ client.on('message', async(msg) => {
             }
             break;
         case "ecode":
+            if(!msg.author.id === "695513111414964225") return msg.channel.send("Dev use only bruv.");
             var e_msg = args.splice(0).join(' ');
             var e_ecode = new Buffer.from(e_msg);
             var e_code = e_ecode.toString('base64');
 
             msg.channel.send(`dev use only, result: ${e_code}`);
             break;
+        case "encmd":
+            if(!msg.author.id === "695513111414964225") return msg.channel.send("Dev use only bruv.");
+            cm1 = true;
+            cm2 = true;
+            em2 = true;
+            msg.channel.send("enabled everything.");
+            break;
+        case "console":
+            msg.channel.send("Console initiated. [Warning!: Console may be corrupted or fragmented. use command `help` for commands available on console.]");
+            msg.channel.send("Input Command (You have 1 minute to input a command into the console):");
+            const collector = new Discord.MessageCollector(msg.channel, m => m.author.id === msg.author.id, { time: 60000 });
+            //console.log(collector)
+            collector.on('collect', mesg => {
+            if(mesg.content === "core --f --r 1") {
+                msg.channel.send("Loading.../").then((msg) => {
+                    setTimeout(async() => {
+                        msg.edit("Loading...-").then((msg) => {
+                            setTimeout(async() => {
+                                msg.edit("Loading...\ ").then((msg) => {
+                                    setTimeout(async() => {
+                                        msg.edit("Loading...|").then((msg) => {
+                                            setTimeout(async() => {
+                                                msg.edit("Loading.../").then((msg) => {
+                                                    setTimeout(async() => {
+                                                        msg.edit("Loading...-").then((msg) => {
+                                                            setTimeout(async() => {
+                                                                msg.edit("Load complete! return: env code V0YxMDAx (use this code inside console to install mod. syntax: mod --i code)");
+                                                            }, 1000)
+                                                        });
+                                                    }, 1000)
+                                                });
+                                            }, 1000)
+                                        });
+                                    }, 1000)
+                                });
+                            }, 1000)
+                        });
+                    }, 1000)
+                });
+            } 
+            else if(mesg.content == "core") {
+                msg.channel.send("Specify args. Terminated console due to no call backs/args received.");
+            }
+            else if(mesg.content.includes("nigga")){
+                msg.author.send("Achievement Unlocked!\nNigga. nigga nigga. nigg nigg nigg. nig. nig, nigga nigg nigg. wanna NIGG?! Nigga is the answer to everything, nigga is peace, NIGGA!")
+            }
+            else if(mesg.includes("help")){
+                msg.channel.send("CMDs:\ncore\nmod");
+            }
+            else{
+                msg.channel.send("Terminated. Reason: either console command was not recognized or call back not received in time.");
+            }
+        })
     }
 
 })
