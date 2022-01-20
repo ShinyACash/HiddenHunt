@@ -308,7 +308,7 @@ client.on('message', async(msg) => {
             msg.channel.send("Input Command (You have 1 minute to input a command into the console):");
             const collector = new Discord.MessageCollector(msg.channel, m => m.author.id === msg.author.id, { time: 60000 });
             //console.log(collector)
-            collector.on('collect', msg => {
+            collector.on('collect', mesg => {
             if(msg.content === "core --f --r 1") {
                 msg.channel.send("Loading.../").then((msg) => {
                     setTimeout(async() => {
