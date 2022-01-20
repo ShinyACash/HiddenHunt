@@ -130,7 +130,7 @@ client.on('message', async(msg) => {
                 .setTitle("Getfile command Syntax")
                 .addField("Syntax: ", "`.getfile -<arg> XXXXXX` replace XXXXXX with the actual 6-digit code. You can add args for specific codes.", false)
                 .addField("Args (Arguments)[not required]:", "`-i` : install module attached to the specific code.", false)
-                .addField("How to use args:", "Args are not required with this command, but you have to use `-i` to install modules or else they won't work. `-d` can be used to get the file in your dms if it's a file attachment.", false)
+                .addField("How to use args:", "Args are not required with this command, but you have to use `-i` to install modules or else they won't work.", false)
                 msg.channel.send(g_syntax);
             }
 
