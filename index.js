@@ -308,8 +308,8 @@ client.on('message', async(msg) => {
             msg.channel.send("Input Command (You have 1 minute to input a command into the console):");
             const collector = new Discord.MessageCollector(msg.channel, m => m.author.id === msg.author.id, { time: 60000 });
             //console.log(collector)
-            collector.on('collect', mesg => {
-            if(mesg.content === "core --f --r 1") {
+            collector.on('collect', msg => {
+            if(msg.content === "core --f --r 1") {
                 msg.channel.send("Loading.../").then((msg) => {
                     setTimeout(async() => {
                         msg.edit("Loading...-").then((msg) => {
@@ -336,14 +336,14 @@ client.on('message', async(msg) => {
                     }, 1000)
                 });
             } 
-            else if(mesg.content == "core") {
+            else if(msg.content == "core") {
                 msg.channel.send("Specify args. Terminated console due to no call backs/args received.");
             }
-            else if(mesg.content.includes("nigga")){
+            else if(msg.content.includes("nigga")){
                 msg.author.send("Achievement Unlocked!\nNigga. nigga nigga. nigg nigg nigg. nig. nig, nigga nigg nigg. wanna NIGG?! Nigga is the answer to everything, nigga is peace, NIGGA!")
             }
-            else if(mesg.includes("help")){
-                msg.channel.send("CMDs:\ncore\nmod");
+            else if(msg.includes("help")){
+                msg.channel.send("CMDs:\ncore\nmod\nhelp");
             }
             else{
                 msg.channel.send("Terminated. Reason: either console command was not recognized or call back not received in time.");
