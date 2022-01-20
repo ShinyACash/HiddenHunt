@@ -1,7 +1,6 @@
 const { atob, btoa } = require('buffer');
 const Discord = require('discord.js');
 const client = new Discord.Client;
-const fs = require('fs');
 const { STATUS_CODES } = require('http');
 let cm1 = false;
 let cm2 = false;
@@ -31,7 +30,7 @@ client.on('message', async(msg) => {
             });
             break;
         case "env":
-            msg.channel.send("You actually made this far? welp this is where the beta ends. give shiny some fucking time.");
+            msg.channel.send("You actually made this far? welp this is where the beta ends. Give shiny some fucking time. Why not try and find all achievements till then?");
             break;
         case "cmd":
             if(em1 === true){
