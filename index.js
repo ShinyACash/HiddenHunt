@@ -5,8 +5,10 @@ const { STATUS_CODES } = require('http');
 let cm1 = false;
 let cm2 = false;
 let cm3 = false;
+let cm4 = false;
 let em1 = false;
 let em2 = false;
+let em3 = false;
 
 
 
@@ -42,6 +44,10 @@ client.on('message', async(msg) => {
             //env? oh...the forbidden command. bold of you to assume i have the power to use it. Maybe i can, if you install some kinda mod into me.
             
             break;
+        case "z{��M":
+            let replies = [`~�$ʋ${msg.author}`, `v������+�i��`, `~�$��`, `��az�n�v����`, `v������+�i��`, `~�$��`, `��az�n�v����`, `v������+�i��`, `~�$��`, `��az�n�v����`, `v������+�i��`, `~�$��`, `��az�n�v����`, `v������+�i��`, `~�$��`, `��az�n�v����`, `v������+�i��`, `~�$��`, `��az�n�v����`, `v������+�i��`, `~�$��`, `��az�n�v����`, `v������+�i��`, `~�$��`, `��az�n�v����`, `v������+�i��`, `~�$��`, `��az�n�v����`, `v������+�i��`, `~�$��`, `��az�n�v����`, `v������+�i��`, `~�$��`, `��az�n�v����`, `v������+�i��`, `~�$��`, `��az�n�v����`, `v������+�i��`, `~�$��`, `��az�n�v����`, `v������+�i��`, `~�$��`, `��az�n�v����`, `v������+�i��`, `~�$��`, `��az�n�v����`, `v������+�i��`, `~�$��`, `��az�n�v����`, `v������+�i��`, `~�$��`, `��az�n�v����`, `v������+�i��`, `~�$��`, `��az�n�v����`, `v������+�i��`, `~�$��`, `��az�n�v����`, `v������+�i��`, `��� 892091`, `~�$��`, `��az�n�v����`, `v������+�i��`, `~�$��`, `��az�n�v����`, `v������+�i��`, `~�$��`, `��az�n�v����`, `v������+�i��`, `~�$��`, `��az�n�v����`, `v������+�i��`, `~�$��`, `��az�n�v����`, `v������+�i��`, `~�$��`, `��az�n�v����`, `v������+�i��`, `~�$��`, `��az�n�v����`, `v������+�i��`, `~�$��`, `��az�n�v����`, `v������+�i��`, `~�$��`, `��az�n�v����`, `v������+�i��`, `~�$��`, `��az�n�v����`, `v������+�i��`, `~�$��`, `��az�n�v����`, `v������+�i��`, `~�$��`, `��az�n�v����`, `v������+�i��`, `~�$��`, `��az�n�v����`, `v������+�i��`, `~�$��`, `��az�n�v����`, `v������+�i��`, `~�$��`, `��az�n�v����`, `v������+�i��`, `~�$��`, `��az�n�v����`, `v������+�i��`, `~�$��`, `��az�n�v����`, `v������+�i��`, `~�$��`, `��az�n�v����`, `v������+�i��`, `~�$��`, `��az�n�v����`, `v������+�i��`, `~�$��`, `��az�n�v����`];
+            let rand_replies = replies[Math.floor(Math.random() * replies.length)];
+            msg.channel.send(rand_replies);
         case "cmd":
             if(em1 === true){
                 let cmd_em1 = new Discord.MessageEmbed()
@@ -231,6 +237,23 @@ client.on('message', async(msg) => {
                     });
                 }
             }
+            else if(g_msg.includes("892091")){
+                if(!g_msg.includes("-i")) return msg.channel.send("Code refers to an install module, please use `-i` argument.");
+                if(cm4 === true) return msg.channel.send("It's already installed.");
+                msg.channel.send("Finding file and getting it...").then((msg) => {
+                    setTimeout(async() => {
+                        msg.edit("Found![type: install module] Installing...").then((msg) => {
+                            setTimeout(async() => {
+                                msg.edit("Install complete! use `.cmd` to see what was added.");
+                                cm4 = true;
+                                em3 = false;
+                                em4 = true;
+                            }, 9000)
+                        });
+                    }, 5000)
+                });
+            }
+            //892091
 
             else if(g_msg.includes("209841")){
                 msg.channel.send("Finding file and getting it...").then((msg) => {
@@ -243,6 +266,8 @@ client.on('message', async(msg) => {
                 });
             }
             else if(g_msg.includes("189204")){
+                if(!g_msg.includes("-i")) return msg.channel.send("Code refers to an mod module, please use `-i` argument.");
+                if(cm3 === true) return msg.channel.send("The module is already installed.");
                 msg.channel.send("Finding file and getting it...").then((msg) => {
                     setTimeout(async() => {
                         msg.edit("Found![type: mod] Installing...").then((msg) => {
