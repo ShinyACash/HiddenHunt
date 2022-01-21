@@ -4,6 +4,7 @@ const client = new Discord.Client;
 const { STATUS_CODES } = require('http');
 let cm1 = false;
 let cm2 = false;
+let cm3 = false;
 let em1 = false;
 let em2 = false;
 
@@ -30,8 +31,16 @@ client.on('message', async(msg) => {
             });
             break;
         case "env":
-            msg.channel.send("You actually made this far? welp this is where the beta ends. Give shiny some fucking time. Why not try and find all achievements till then?");
+            if(cm3 === false) return msg.channel.send("env? oh...the *forbidden command*. Bold of you to assume I have the power to use it. Maybe I can, if you install some kinda mod into me.");
+            var env_msg = args.splice(0).join(' ');
+            if(!env_msg || env_msg === "-s"){
+                msg.channel.send("I don't know the syntax really, it's a really powerful command even beyond my control. Maybe it just takes strings? or numbers? or both? idrk man.");
+            }
+            if(env_msg.includes("WF1001")){
+                msg.channel.send("Oh that actually triggered something, I did feel something. I think one of the workflows triggered. Try searching for `wf1001`");
+            }
             //env? oh...the forbidden command. bold of you to assume i have the power to use it. Maybe i can, if you install some kinda mod into me.
+            
             break;
         case "cmd":
             if(em1 === true){
@@ -54,6 +63,18 @@ client.on('message', async(msg) => {
                 .addField("`dcode`", "decodes string and returns decoded form of an encoded string [works only on base64 type strings. Altho it's gonna give fucked up shit with random inputs, so use caution.]", false)
                 .setFooter("You can use `-s` as an arguement for the command you need the syntax for.\nIt is advised to install all modules again everyday since I reset everyday for security purposes.")
                 msg.channel.send(cmd_em2);
+            }
+            else if(em3 === true){
+                let cmd_em3 = new Discord.MessageEmbed()
+                .setColor("#58c9d1")
+                .setTitle("Commands")
+                .addField("`search`", "Searches for files in directories and informs if files of that name or type exist.", false)
+                .addField("`getfile`", "Provides file attachments associated with their specific codes.", false)
+                .addField("`link`", "Converts strings (string means a group of letters, example: `hello`) to links only if it detects any links from the given string", false)
+                .addField("`dcode`", "decodes string and returns decoded form of an encoded string [works only on base64 type strings. Altho it's gonna give fucked up shit with random inputs, so use caution.]", false)
+                .addField("`env`", "Gets access to workflows.", false)
+                .setFooter("You can use `-s` as an arguement for the command you need the syntax for.\nIt is advised to install all modules again everyday since I reset everyday for security purposes.")
+                msg.channel.send(cmd_em3);
             }
             else{
                 let cmd_em = new Discord.MessageEmbed()
@@ -99,6 +120,9 @@ client.on('message', async(msg) => {
                     msg.channel.send("BRO IT's RIGHT THERE!");
                     msg.author.send("Achievement Unlocked! (4 of 4)\n Mr. Oblivious.");
                 }
+                else if(s_msg.includes("wf1001")){
+                    msg.channel.send("I found this corrupted command `.z{��M` in the workflow environment. Idrk what's happenin man this shit getting crazy.")
+                }
                 else{
                     msg.channel.send("Couldn't find shit there.");
                 }
@@ -117,7 +141,9 @@ client.on('message', async(msg) => {
                 }
             }
             else if(s_msg.includes("-enc")){
-
+                if(msg.includes("POWQen1Z7ASdn0QWnsck0J*(J#@(FwesdcNQawodQWNjfnXMwqonafsjCWMEsdmCAs")){
+                    msg.channel.send("I found the following:\n189204");
+                }
             }
             else if(s_msg || !s_msg === '-s'){
                 msg.channel.send("Please specify an argument. [`.search -s` for syntax]");
@@ -216,6 +242,20 @@ client.on('message', async(msg) => {
                     }, 5000)
                 });
             }
+            else if(g_msg.includes("189204")){
+                msg.channel.send("Finding file and getting it...").then((msg) => {
+                    setTimeout(async() => {
+                        msg.edit("Found![type: mod] Installing...").then((msg) => {
+                            setTimeout(async() => {
+                                msg.edit("Install complete! use `.cmd` to see what was added.");
+                                cm3 = true;
+                                em2 = false;
+                                em3 = true;
+                            }, 9000)
+                        });
+                    }, 5000)
+                });
+            }
 
             else if(g_msg.includes("999999")){
                 msg.channel.send("Finding achievement and getting it...(you probs already got it lol)").then(() => {
@@ -303,52 +343,14 @@ client.on('message', async(msg) => {
             em2 = true;
             msg.channel.send("enabled everything.");
             break;
-        case "console":
-            msg.channel.send("Console initiated. [Warning!: Console may be corrupted or fragmented. use command `help` for commands available on console.]");
-            msg.channel.send("Input Command (You have 1 minute to input a command into the console):");
-            const collector = new Discord.MessageCollector(msg.channel, m => m.author.id === msg.author.id, { time: 60000 });
-            //console.log(collector)
-            collector.on('collect', mesg => {
-            if(msg.content === "core --f --r 1") {
-                msg.channel.send("Loading.../").then((msg) => {
-                    setTimeout(async() => {
-                        msg.edit("Loading...-").then((msg) => {
-                            setTimeout(async() => {
-                                msg.edit("Loading...\ ").then((msg) => {
-                                    setTimeout(async() => {
-                                        msg.edit("Loading...|").then((msg) => {
-                                            setTimeout(async() => {
-                                                msg.edit("Loading.../").then((msg) => {
-                                                    setTimeout(async() => {
-                                                        msg.edit("Loading...-").then((msg) => {
-                                                            setTimeout(async() => {
-                                                                msg.edit("Load complete! return: env code V0YxMDAx (use this code inside console to install mod. syntax: mod --i code)");
-                                                            }, 1000)
-                                                        });
-                                                    }, 1000)
-                                                });
-                                            }, 1000)
-                                        });
-                                    }, 1000)
-                                });
-                            }, 1000)
-                        });
-                    }, 1000)
-                });
-            } 
-            else if(msg.content == "core") {
-                msg.channel.send("Specify args. Terminated console due to no call backs/args received.");
-            }
-            else if(msg.content.includes("nigga")){
-                msg.author.send("Achievement Unlocked!\nNigga. nigga nigga. nigg nigg nigg. nig. nig, nigga nigg nigg. wanna NIGG?! Nigga is the answer to everything, nigga is peace, NIGGA!")
-            }
-            else if(mesg.includes("help")){
-                msg.channel.send("CMDs:\ncore\nmod\nhelp");
-            }
-            else{
-                msg.channel.send("Terminated. Reason: either console command was not recognized or call back not received in time.");
-            }
-        })
+        case "dcmd":
+            if(!msg.author.id === "695513111414964225") return msg.channel.send("Dev use only bruv.");
+            cm1 = false;
+            cm2 = false;
+            em2 = false;
+            em1 = false;
+            msg.channel.send("reset.");
+            break;
     }
 
 })
