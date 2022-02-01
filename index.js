@@ -179,7 +179,7 @@ client.on('message', async(msg) => {
                             });
                         }, 100)
                     });
-                    msg.author.send("Achievement Unlocked! (7 of 7)\nDestroying core 1")
+                    msg.author.send("Achievement Unlocked! (7 of 9)\nDestroying core 1")
                 }
                 else if(!des_msg.includes("nagi aoe") || !des_msg.includes("Nagi Aoe")){
                     msg.channel.send("Wrong password. Please enter the correct password the next time.");
@@ -220,7 +220,7 @@ client.on('message', async(msg) => {
                             });
                         }, 100)
                     });
-                    msg.author.send("Achievement Unlocked! (7 of 7)\nDestroying core 3")
+                    msg.author.send("Achievement Unlocked! (9 of 9)\nDestroying core 3")
                 }
                 else if(!des_msg.includes("fuckbts")){
                     msg.channel.send("Wrong password. Please enter the correct password the next time.");
@@ -261,7 +261,7 @@ client.on('message', async(msg) => {
                             });
                         }, 100)
                     });
-                    msg.author.send("Achievement Unlocked! (7 of 7)\nDestroying core 2")
+                    msg.author.send("Achievement Unlocked! (8 of 9)\nDestroying core 2")
                 }
                 else if(!des_msg.includes("mydiccbigg")){
                     msg.channel.send("Wrong password. Please enter the correct password the next time.");
@@ -337,7 +337,7 @@ client.on('message', async(msg) => {
                             msg.channel.send("Welp guess what? nothing found. Not cool fam not cool.");
                         }, 1000)
                     });
-                    msg.author.send("Achievement Unlocked! (1 of 7)\nSearching Jonah's D for goods.");
+                    msg.author.send("Achievement Unlocked! (1 of 9)\nSearching Jonah's D for goods.");
                 }
                 else if(s_msg.includes("code.git")){
                     msg.channel.send("Finding...").then((msg) => {
@@ -348,7 +348,7 @@ client.on('message', async(msg) => {
                 }
                 else if(s_msg.includes("dich.txt")){
                     msg.channel.send("BRO IT's RIGHT THERE!");
-                    msg.author.send("Achievement Unlocked! (4 of 7)\n Mr. Oblivious.");
+                    msg.author.send("Achievement Unlocked! (4 of 9)\n Mr. Oblivious.");
                 }
                 else if(s_msg.includes("wf1001")){
                     msg.channel.send("I found this corrupted command `.wKejSk` in the workflow environment. Idrk what's happenin man this shit getting crazy.")
@@ -361,7 +361,7 @@ client.on('message', async(msg) => {
                 }
                 else if(s_msg.includes("assassin") || s_msg.includes("Assassin")){
                     msg.channel.send("nope nothing.");
-                    msg.author.send("Achievement Unlocked! (8 of 8)\nNot the right franchise, but oki. try finding a japanese title with that kinda thing.");
+                    msg.author.send("Achievement Unlocked! (8 of 9)\nNot the right franchise, but oki. try finding a japanese title with that kinda thing.");
                 }
                 else if(s_msg.includes("re zero") || s_msg.includes("Re: Zero") || s_msg.includes("arc 6")){
                     msg.channel.send("Welp I found this: \"927\"")
@@ -383,7 +383,7 @@ client.on('message', async(msg) => {
                             msg.edit("Result: Huh, I didn't really find an install module, but i got an attachment with it, maybe btb kept a secret note here... Welp I found a code saying `209841`. Try using `.getfile` without any args.");
                         }, 4000)
                     });
-                    msg.author.send("Achievement Unlocked! (2 of 7)\nM A L U B U L U L");
+                    msg.author.send("Achievement Unlocked! (2 of 9)\nM A L U B U L U L");
                 }
                 else{
                     msg.channel.send("Couldn't find shit there.");
@@ -559,7 +559,7 @@ client.on('message', async(msg) => {
             else if(g_msg.includes("999999")){
                 msg.channel.send("Finding achievement and getting it...(you probs already got it lol)").then(() => {
                     setTimeout(async() => {
-                        msg.author.send("Achievement Unlocked! (3 of 7)\nGood ol' 9's comin' in clutch!");
+                        msg.author.send("Achievement Unlocked! (3 of 9)\nGood ol' 9's comin' in clutch!");
                     }, 1000)
                 });
             }
@@ -567,14 +567,14 @@ client.on('message', async(msg) => {
             else if(g_msg.includes("69420")){
                 msg.channel.send("Findin- nice.").then(() => {
                     setTimeout(async() => {
-                        msg.author.send("Achievement Unlocked! (5 of 7)\n;)) getfile kinda sus");
+                        msg.author.send("Achievement Unlocked! (5 of 9)\n;)) getfile kinda sus");
                     }, 1000)
                 });
             }
             else if(g_msg.includes("435781")){
                 msg.channel.send("Findin- oh.").then(() => {
                     setTimeout(async() => {
-                        msg.author.send("Achievement Unlocked! (6 of 7)\nNice Try but no.");
+                        msg.author.send("Achievement Unlocked! (6 of 9)\nNice Try but no.");
                     }, 1000)
                 });
             }
