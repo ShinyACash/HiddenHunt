@@ -353,6 +353,12 @@ client.on('message', async(msg) => {
                 else if(s_msg.includes("wf1001")){
                     msg.channel.send("I found this corrupted command `.wKejSk` in the workflow environment. Idrk what's happenin man this shit getting crazy.")
                 }
+                else if(s_msg.includes("nagi aoe")){
+                    msg.channel.send("seems like some kinda password to something.");
+                }
+                else if(s_msg.includes("225x330")){
+                    msg.channel.send("huh, descore seemed like it reacted to that string...");
+                }
                 else if(s_msg.includes("masamune-kun no revenge") || s_msg.includes("Masamune-kun No Revenge")){
                     msg.channel.send("Huh? I didn\'t know btb liked anime lol. Welp i didn't really find anything but 'Chapter 37'... I wonder what that means.");
                 }
