@@ -362,7 +362,7 @@ client.on('message', async(msg) => {
                 else if(s_msg.includes("masamune-kun no revenge") || s_msg.includes("Masamune-kun No Revenge")){
                     msg.channel.send("Huh? I didn\'t know btb liked anime lol. Welp i didn't really find anything but 'Chapter 37'... I wonder what that means.");
                 }
-                else if(s_msg.includes("piggy") || s_msg.includes("Piggy")){
+                else if(s_msg.includes("piggy") || s_msg.includes("Piggy") || s_msg.includes("pig's legs") || s_msg.includes("Pig's legs")){
                     msg.channel.send("Huh...Welp, I found this string in this directory, \"記憶の回廊\" don really know what it means...");
                 }
                 else if(s_msg.includes("assassin") || s_msg.includes("Assassin")){
@@ -586,7 +586,7 @@ client.on('message', async(msg) => {
             }
 
             else if(g_msg){
-                msg.channel.send("Finding file and getting it").then((msg) => {
+                msg.channel.send("Finding file and getting it...").then((msg) => {
                     setTimeout(async() => {
                         msg.edit("Failed! The file code given does not exist.");
                     }, 5000)
