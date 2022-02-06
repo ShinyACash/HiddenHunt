@@ -164,7 +164,7 @@ client.on('message', async(msg) => {
                                                                     msg.edit("Core 1 destroyed. Gone, reduced to atoms. I think that enabled sumn...").then((msg) => {
                                                                         setTimeout(async() => {
                                                                             msg.channel.send("https://tenor.com/view/thanos-infinity-gauntlet-snap-finger-snap-gif-12502580");
-                                                                        }, 1000)
+                                                                        }, 100)
                                                                     });
                                                                     core1 = true;
                                                                 }, 100)
@@ -202,10 +202,10 @@ client.on('message', async(msg) => {
                                                         setTimeout(async() => {
                                                             msg.edit("Destroying...-").then((msg) => {
                                                                 setTimeout(async() => {
-                                                                    msg.edit("Core 3 destroyed. Gone, reduced to atoms.").then((msg) => {
+                                                                    msg.edit("Core 2 destroyed. Gone, reduced to atoms.").then((msg) => {
                                                                         setTimeout(async() => {
                                                                             msg.channel.send("https://tenor.com/view/thanos-infinity-gauntlet-snap-finger-snap-gif-12502580");
-                                                                        }, 1000)
+                                                                        }, 100)
                                                                     });
                                                                     core2 = true;
                                                                 }, 100)
@@ -220,13 +220,13 @@ client.on('message', async(msg) => {
                             });
                         }, 100)
                     });
-                    msg.author.send("Achievement Unlocked! (9 of 9)\nDestroying core 3")
+                    msg.author.send("Achievement Unlocked! (9 of 9)\nDestroying core 2")
                 }
                 else if(!des_msg.includes("fuckbts")){
                     msg.channel.send("Wrong password. Please enter the correct password the next time.");
                 }
                 else{
-                    msg.channel.send("core 3 code detected. Please enter passcode beside it.");
+                    msg.channel.send("core 2 code detected. Please enter passcode beside it.");
                 }
             }
             else if(des_msg.includes("deep meanings")){
@@ -243,10 +243,14 @@ client.on('message', async(msg) => {
                                                         setTimeout(async() => {
                                                             msg.edit("Destroying...-").then((msg) => {
                                                                 setTimeout(async() => {
-                                                                    msg.edit("Core 2 destroyed. Gone, reduced to atoms.").then((msg) => {
+                                                                    msg.edit("Core 3 destroyed. Gone, reduced to atoms.").then((msg) => {
                                                                         setTimeout(async() => {
                                                                             msg.channel.send("https://tenor.com/view/thanos-infinity-gauntlet-snap-finger-snap-gif-12502580");
-                                                                        }, 1000)
+                                                                            msg.channel.send({
+                                                                                files: ['./website/hunt.html' ]
+                                                                            })
+                                                                            msg.channel.send("Maybe try and use this?")
+                                                                        }, 100)
                                                                     });
                                                                     core3 = true;
                                                                 }, 100)
@@ -261,13 +265,13 @@ client.on('message', async(msg) => {
                             });
                         }, 100)
                     });
-                    msg.author.send("Achievement Unlocked! (8 of 9)\nDestroying core 2")
+                    msg.author.send("Achievement Unlocked! (8 of 9)\nDestroying core 3")
                 }
                 else if(!des_msg.includes("mydiccbigg")){
                     msg.channel.send("Wrong password. Please enter the correct password the next time.");
                 }
                 else{
-                    msg.channel.send("core 2 code detected. Please enter passcode beside it.");
+                    msg.channel.send("core 3 code detected. Please enter passcode beside it.");
                 }
             }
             else{
