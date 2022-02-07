@@ -249,7 +249,7 @@ client.on('message', async(msg) => {
                                                                             msg.channel.send({
                                                                                 files: ['./website/hunt.html' ]
                                                                             })
-                                                                            msg.channel.send("Maybe try and use this?")
+                                                                            msg.channel.send("Maybe try and use this? 'Use the firs two as code and second two as the x'th click'")
                                                                         }, 100)
                                                                     });
                                                                     core3 = true;

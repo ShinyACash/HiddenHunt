@@ -13,6 +13,7 @@
                 box-sizing: border-box;
             }
 
+            
             p {
                 position: absolute;
                 font-family: 'Roboto Condensed', sans-serif;
@@ -21,11 +22,11 @@
                 bottom: 5%;
                 text-align: right;
             }
-
+            
             .hintT {
                 color: #000000;
             }
-
+            
             .working {
                 display: block;
                 margin-top: 30px;
@@ -37,7 +38,13 @@
                 right: 42%;
                 text-align: center;
             }
-
+            
+            A {
+                text-decoration: none;
+                color: var(--textcolor);
+            }
+            
+            
             body {
                 background-color: #000000;
                 display: flex;
@@ -49,12 +56,16 @@
                 transition: background 0.3s linear;
                 color: #ffffff;
             }
+            
+            :root {
+                --textcolor: body.color;
+            }
 
             body.dark {
                 background: #ffffff;
                 color: #000000;
             }
-
+            
             button {
                 margin: auto;
                 border-radius: 50px;
@@ -182,6 +193,7 @@
             chk.addEventListener('change', () => {
 	            document.body.classList.toggle('dark');
                 document.getElementById("hint").classList.toggle("dark");
+                //document.getElementById("linkgarb").classList.toggle("dark");
             });
 
             var a = 0;
@@ -202,7 +214,7 @@
                     document.getElementById("Working").innerHTML = "Oh oh, i can feel sumn bro hol up.";
                 }
                 else if(a === 16){
-                    document.getElementById("hintTo").innerHTML = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Fenyloaceton.svg/1200px-Fenyloaceton.svg.png";
+                    document.getElementById("Working").innerHTML = "<a href='https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Fenyloaceton.svg/1200px-Fenyloaceton.svg.png' id='linkgarb'>Oh oh, i can feel sumn bro hol up.</a>";
                 }
                 else if(a === 17){
                     document.getElementById("hintTo").innerHTML = " ";
