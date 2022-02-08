@@ -230,8 +230,29 @@
                 }
             }
 
-            function sendMessage() {
-            }
+            document.addEventListener('keydown', function(event) {
+                if(event.keyCode == 123) {
+                    alert('Oh you cheater don\'t you dare bitch.');
+                    return false;
+                }
+
+                else if(event.ctrlKey && event.shiftKey && event.keyCode == 'I'.charCodeAt(0)) {
+                    alert("Nice try bitch.");
+                    return false;
+                }
+                else if(event.ctrlKey && event.shiftKey && event.keyCode == 'C'.charCodeAt(0)) {
+                    alert("NAaaaaaaaahhhhhhhh jit goin crazy");
+                    return false;
+                }
+                else if(event.ctrlKey && event.shiftKey && event.keyCode == 'J'.charCodeAt(0)) {
+                    alert("nope.");
+                    return false;
+                }
+                else if(event.ctrlKey && event.keyCode == 'U'.charCodeAt(0)) {
+                    alert("nah-ah-ah, say the magic word.");
+                    return false;
+                }
+            });
 
         </script>
     </body>

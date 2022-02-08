@@ -428,7 +428,7 @@ client.on('message', async(msg) => {
                     setTimeout(async() => {
                         msg.edit("Found![type: .txt] Reading and sending file contents...").then((msg) => {
                             setTimeout(async() => {
-                                msg.edit({
+                                msg.channel.send({
                                     files : ['./REMU.txt']
                                 });
                             }, 2000)
