@@ -23,9 +23,19 @@
                 text-align: right;
             }
             
-            .hintT {
+            .T {
                 color: #000000;
             }
+
+            .callback {
+                display: block;
+                position: absolute;
+                left: 0%;
+                top: 0%;
+                color: white;
+                font-size: 1px;
+            }
+
             
             .working {
                 display: block;
@@ -181,7 +191,8 @@
             <button onclick="dosumn()" id="hint">Hint</button>
         </div>
         <p>
-            <span class="hintT" id="hintTo"></span>
+            <span class="T" id="To"></span>
+            <span class="callback" id="To2"></span>
         </p>
         <p1>
             <span class="working" id="Working"></span>
@@ -190,6 +201,10 @@
             const chk = document.getElementById('chk');
 
             document.addEventListener('contextmenu', event => event.preventDefault());
+            callback = "ZGFtbmpvbmFoZGljY2JpZ2c=";
+            let code = atob(callback);
+            xhrhtml = "aHR0cHM6Ly9zdGF0aWMud2lraWEubm9jb29raWUubmV0L2d0YS1teXRocy9pbWFnZXMvMC8wYi9HU0Y0RVZFUi5qcGcvcmV2aXNpb24vbGF0ZXN0P2NiPTIwMTgwODI2MDMxNTM2";
+            let code2 = atob(xhrhtml);
 
             chk.addEventListener('change', () => {
 	            document.body.classList.toggle('dark');
@@ -206,11 +221,11 @@
                     document.getElementById("Working").innerHTML = "It does work bro dw.";
                 }
                 else if(a === 9){
-                    document.getElementById("hintTo").innerHTML = "79, 16";
+                    document.getElementById("To").innerHTML = "79, 16";
                 }
                 else if(a === 10){
                     document.getElementById("Working").innerHTML = "It is still working bro.";
-                    document.getElementById("hintTo").innerHTML = " ";
+                    document.getElementById("To").innerHTML = " ";
                 }
                 else if(a === 14){
                     document.getElementById("Working").innerHTML = "Oh oh, i can feel sumn bro hol up.";
@@ -219,14 +234,55 @@
                     document.getElementById("Working").innerHTML = "<a href='https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Fenyloaceton.svg/1200px-Fenyloaceton.svg.png' id='linkgarb'>Oh oh, i can feel sumn bro hol up.</a>";
                 }
                 else if(a === 17){
-                    document.getElementById("hintTo").innerHTML = " ";
+                    document.getElementById("To").innerHTML = " ";
                 }
                 else if(a === 20){
-                    document.getElementById("Working").innerHTML = "hmmmmmmmmmmmmmmmmmmm...";
+                    document.getElementById("Working").innerHTML = "hmmmmmmmmmmmmmmmmmmmmmmmmmmm...";
                 }
                 else if(a === 28){
                     document.getElementById("Working").innerHTML = "What did you even expect?";
                     window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', "_blank");
+                }
+                else if(a === 30){
+                    document.getElementById("Working").innerHTML = "Oh you still wanna keep going?";
+                }
+                else if(a === 34){
+                    document.getElementById("To2").innerHTML = code;
+                    document.getElementById("Working").innerHTML = "Fine, keep going.";
+                }
+                else if(a === 35){
+                    document.getElementById("To2").innerHTML = " ";
+                }
+                else if(a === 39){
+                    document.getElementById("Working").innerHTML = "Oh wow, still at it? nice.";
+                }
+                else if(a === 42){
+                    document.getElementById("Working").innerHTML = "Want another rick roll? lol";
+                }
+                else if(a === 47){
+                    document.getElementById("Working").innerHTML = "Wow you still at it even after knowing that.";
+                }
+                else if(a === 51){
+                    document.getElementById("Working").innerHTML = "You are over 50 clicks now lol.";
+                    document.getElementById("To2").innerHTML = code2;
+                }
+                else if(a === 52){
+                    document.getElementById("To2").innerHTML = " ";
+                }
+                else if(a === 60){
+                    document.getElementById("Working").innerHTML = "You are over 60 clicks now!";
+                }
+                else if(a === 70){
+                    document.getElementById("Working").innerHTML = "You are over 70 clicks now!";
+                }
+                else if(a === 80){
+                    document.getElementById("Working").innerHTML = "You are over 80 clicks now!";
+                }
+                else if(a === 90){
+                    document.getElementById("Working").innerHTML = "You are over 90 clicks now!";
+                }
+                else if(a === 100){
+                    document.getElementById("Working").innerHTML = "Achievement Unlocked! (10 of 13)\na lotta clicks";
                 }
             }
 
@@ -245,11 +301,11 @@
                     return false;
                 }
                 else if(event.ctrlKey && event.shiftKey && event.keyCode == 'J'.charCodeAt(0)) {
-                    alert("nope.");
+                    alert(code);
                     return false;
                 }
                 else if(event.ctrlKey && event.keyCode == 'U'.charCodeAt(0)) {
-                    alert("nah-ah-ah, say the magic word.");
+                    alert("nah-ah-ah, say the magic word~");
                     return false;
                 }
             });

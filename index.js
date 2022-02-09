@@ -15,6 +15,7 @@ let em5 = false;
 let core1 = false;
 let core2 = false;
 let core3 = false;
+let core4 = false;
 
 //376927
 
@@ -54,6 +55,12 @@ client.on('message', async(msg) => {
             }
             else if(env_msg.includes("WF9008")){
                 msg.channel.send("`deep meanings` i found, with password bXlkaWNjYmlnZw==")
+            }
+            else if(env_msg.includes("WF4269")){
+                msg.channel.send("`chemtodisney` and password `fuckchem`");
+            }
+            else if(env_msg.includes("WF4007")){
+                msg.channel.send("`worldwidegamer` and password `chemop`");
             }
             //env? oh...the forbidden command. bold of you to assume i have the power to use it. Maybe i can, if you install some kinda mod into me.
             
@@ -179,7 +186,7 @@ client.on('message', async(msg) => {
                             });
                         }, 100)
                     });
-                    msg.author.send("Achievement Unlocked! (7 of 9)\nDestroying core 1")
+                    msg.author.send("Achievement Unlocked! (7 of 13)\nDestroying core 1")
                 }
                 else if(!des_msg.includes("nagi aoe") || !des_msg.includes("Nagi Aoe")){
                     msg.channel.send("Wrong password. Please enter the correct password the next time.");
@@ -220,7 +227,7 @@ client.on('message', async(msg) => {
                             });
                         }, 100)
                     });
-                    msg.author.send("Achievement Unlocked! (9 of 9)\nDestroying core 2")
+                    msg.author.send("Achievement Unlocked! (9 of 13)\nDestroying core 2")
                 }
                 else if(!des_msg.includes("fuckbts")){
                     msg.channel.send("Wrong password. Please enter the correct password the next time.");
@@ -249,7 +256,7 @@ client.on('message', async(msg) => {
                                                                             msg.channel.send({
                                                                                 files: ['./website/hunt.html' ]
                                                                             })
-                                                                            msg.channel.send("Maybe try and use this? 'Use the firs two as code and second two as the x'th click'")
+                                                                            msg.channel.send("Maybe try and use this? 'Use the first two as code and second two as the x'th click'")
                                                                         }, 100)
                                                                     });
                                                                     core3 = true;
@@ -265,7 +272,7 @@ client.on('message', async(msg) => {
                             });
                         }, 100)
                     });
-                    msg.author.send("Achievement Unlocked! (8 of 9)\nDestroying core 3")
+                    msg.author.send("Achievement Unlocked! (12 of 13)\nDestroying core 3")
                 }
                 else if(!des_msg.includes("mydiccbigg")){
                     msg.channel.send("Wrong password. Please enter the correct password the next time.");
@@ -273,6 +280,54 @@ client.on('message', async(msg) => {
                 else{
                     msg.channel.send("core 3 code detected. Please enter passcode beside it.");
                 }
+            }
+            else if(des_msg.includes("worldwidegamer")){
+                if(des_msg.includes("chemop")){
+                    msg.channel.send("Destroying.../").then((msg) => {
+                        setTimeout(async() => {
+                            msg.edit("Destroying...-").then((msg) => {
+                                setTimeout(async() => {
+                                    msg.edit("Destroying...\\ ").then((msg) => {
+                                        setTimeout(async() => {
+                                            msg.edit("Destroying...|").then((msg) => {
+                                                setTimeout(async() => {
+                                                    msg.edit("Destroying.../").then((msg) => {
+                                                        setTimeout(async() => {
+                                                            msg.edit("Destroying...-").then((msg) => {
+                                                                setTimeout(async() => {
+                                                                    msg.edit("Core 4 destroyed. Gone, reduced to atoms.").then((msg) => {
+                                                                        setTimeout(async() => {
+                                                                            msg.channel.send("https://tenor.com/view/thanos-infinity-gauntlet-snap-finger-snap-gif-12502580");    
+                                                                        }, 100)
+                                                                    });
+                                                                    core4 = true;
+                                                                }, 100)
+                                                            });
+                                                        }, 100)
+                                                    });
+                                                }, 100)
+                                            });
+                                        }, 100)
+                                    });
+                                }, 100)
+                            });
+                        }, 100)
+                    });
+                    msg.author.send("Achievement Unlocked! (13 of 13)\nDestroying core 4")
+                }
+                else if(!des_msg.includes("mydiccbigg")){
+                    msg.channel.send("Wrong password. Please enter the correct password the next time.");
+                }
+                else{
+                    msg.channel.send("core 4 code detected. Please enter passcode beside it.");
+                }
+            }
+            else if(des_msg.includes("chemtodisney")){
+                msg.channel.send("Loadin- oh.").then((msg) => {
+                    setTimeout(async() => {
+                        msg.author.send("Achievement unlocked!(11 of 13)\nSIKE! THAS THE WRONG CODE SET!");
+                    }, 100)
+                });
             }
             else{
                 msg.channel.send("wrong core code.");
@@ -319,6 +374,33 @@ client.on('message', async(msg) => {
                     }, 100)
                 });
             }
+            else if(cor_msg.includes("ortensia") || cor_msg.includes("Ortensia")){
+                msg.channel.send("Loading.../").then((msg) => {
+                    setTimeout(async() => {
+                        msg.edit("Loading...-").then((msg) => {
+                            setTimeout(async() => {
+                                msg.edit("Loading...\\ ").then((msg) => {
+                                    setTimeout(async() => {
+                                        msg.edit("Loading...|").then((msg) => {
+                                            setTimeout(async() => {
+                                                msg.edit("Loading.../").then((msg) => {
+                                                    setTimeout(async() => {
+                                                        msg.edit("Loading...-").then((msg) => {
+                                                            setTimeout(async() => {
+                                                                msg.edit("De-corruption complete!\nResult: Disney's second series.");
+                                                            }, 100)
+                                                        });
+                                                    }, 100)
+                                                });
+                                            }, 100)
+                                        });
+                                    }, 100)
+                                });
+                            }, 100)
+                        });
+                    }, 100)
+                });
+            }
             break;
         case "search":
             var s_msg = args.splice(0).join(' ');
@@ -341,7 +423,7 @@ client.on('message', async(msg) => {
                             msg.channel.send("Welp guess what? nothing found. Not cool fam not cool.");
                         }, 1000)
                     });
-                    msg.author.send("Achievement Unlocked! (1 of 9)\nSearching Jonah's D for goods.");
+                    msg.author.send("Achievement Unlocked! (1 of 13)\nSearching Jonah's D for goods.");
                 }
                 else if(s_msg.includes("code.git")){
                     msg.channel.send("Finding...").then((msg) => {
@@ -352,7 +434,7 @@ client.on('message', async(msg) => {
                 }
                 else if(s_msg.includes("dich.txt")){
                     msg.channel.send("BRO IT's RIGHT THERE!");
-                    msg.author.send("Achievement Unlocked! (4 of 9)\n Mr. Oblivious.");
+                    msg.author.send("Achievement Unlocked! (4 of 13)\n Mr. Oblivious.");
                 }
                 else if(s_msg.includes("wf1001")){
                     msg.channel.send("I found this corrupted command `.wKejSk` in the workflow environment. Idrk what's happenin man this shit getting crazy.")
@@ -371,7 +453,7 @@ client.on('message', async(msg) => {
                 }
                 else if(s_msg.includes("assassin") || s_msg.includes("Assassin")){
                     msg.channel.send("nope nothing.");
-                    msg.author.send("Achievement Unlocked! (8 of 9)\nNot the right franchise, but oki. try finding a japanese title with that kinda thing.");
+                    msg.author.send("Achievement Unlocked! (8 of 13)\nNot the right franchise, but oki. try finding a japanese title with that kinda thing.");
                 }
                 else if(s_msg.includes("re zero") || s_msg.includes("Re: Zero") || s_msg.includes("arc 6")){
                     msg.channel.send("Welp I found this: \"927\"")
@@ -382,6 +464,49 @@ client.on('message', async(msg) => {
                 else if(s_msg.includes("Grisha") || s_msg.includes("grisha") || s_msg.includes("Grisha Jaeger") || s_msg.includes("grisha jaeger")){
                     msg.channel.send("oooooo damn you knew the answer, althought i think you googled but oki. welp here's your workflow code WF1003");
                 }
+                else if(s_msg.includes("Phenyloacetone") || s_msg.includes("Fenyloacetone")){
+                    msg.channel.send("You probs cheated but oki. Your next hint is, `DOTN time.`")
+                }
+                else if(s_msg.includes("2h 7m") || s_msg.includes("2 hours")){
+                    msg.channel.send("Damn, you got it. Welp next up, aHR0cHM6Ly91cGxvYWQud2lraW1lZGlhLm9yZy93aWtpcGVkaWEvY29tbW9ucy90aHVtYi85LzlmL0Jlcm5zdGVpbnMlQzMlQTR1cmUyLnN2Zy8xMjAwcHgtQmVybnN0ZWlucyVDMyVBNHVyZTIuc3ZnLnBuZw==")
+                }
+                else if(s_msg.includes("succinic acid")){
+                    msg.channel.send("hehe nice. but you don gotta use that here.");
+                }
+                else if(s_msg.includes("oswald") || s_msg.includes("Oswald")){
+                    msg.channel.send("Demn, that is OLLLDDDD. Welp i found 98 in the directory but then the other thing is corrupted. try using oswald's 10v3's name on dcor.");
+                }
+                else if(s_msg.includes("mortimer mouse") || s_msg.includes("Mortimer Mouse")){
+                    msg.channel.send("whoa whoa whoa HOW'd YOU DO THAT?! oh well, i still can't find the numbers, welp maybe i can find it somewhere hidden in the movies which have mickeys in'em.");
+                }
+                else if(s_msg.includes("1000")){
+                    msg.channel.send("gg, the last two numbers are 41");
+                }
+                else if(s_msg.includes("damnjonahdiccbigg")){
+                    msg.channel.send("wow uhh...i am flattered, thank you. wabu- i mean kyoto is a nice place to visit eh? i wonder what the gates there are called...those 10,000 gates.");
+                }
+                else if(s_msg.includes("Fushimi Inari") || s_msg.includes("fushimi inari")){
+                    msg.channel.send("Ohhh, i see. welp what about the square thingy? in Beijing.");
+                }
+                else if(s_msg.includes("tiananmen") || s_msg.includes("Tiananmen")){
+                    msg.channel.send("oh damn, what about the tower in spain?");
+                }
+                else if(s_msg.includes("Hercules") || s_msg.includes("hercules")){
+                    msg.channel.send("ah, i see, what about the underground thingy in turkey?");
+                }
+                else if(s_msg.includes("Derinkuyu") || s_msg.includes("derinkuyu")){
+                    msg.channel.send("Damn mr./ms. worldwide. here's your two numbers `82`");
+                }
+                else if(s_msg.includes("grove street") || s_msg.includes("Grove")){
+                    msg.channel.includes("HOME, at least it was before cj fucked up 5 yee's ago. welp anyway, what's the game-making dare called?");
+                }
+                else if(s_msg.includes("Ludum") || s_msg.includes("ludum")){
+                    msg.channel.includes("lol that must have taken time. welp which was minecraft in?");
+                }
+                else if(s_msg.includes("22")){
+                    msg.channel.send("that was ez. Btb once told me that he tried to participate in the ludum dare but shiny was lazy af. what a scrub. welp  i found these numbers in the directory: 048 057");
+                }
+                
                 else{
                     msg.channel.send("Couldn't find shit there.");
                 }
@@ -393,7 +518,7 @@ client.on('message', async(msg) => {
                             msg.edit("Result: Huh, I didn't really find an install module, but i got an attachment with it, maybe btb kept a secret note here... Welp I found a code saying `209841`. Try using `.getfile` without any args.");
                         }, 4000)
                     });
-                    msg.author.send("Achievement Unlocked! (2 of 9)\nM A L U B U L U L");
+                    msg.author.send("Achievement Unlocked! (2 of 13)\nM A L U B U L U L");
                 }
                 else{
                     msg.channel.send("Couldn't find shit there.");
@@ -449,6 +574,30 @@ client.on('message', async(msg) => {
                     }, 5000)
                 });
                 
+            }
+
+            else if(g_msg.includes("799841")){
+                msg.channel.send("Finding file and getting it...").then((msg) => {
+                    setTimeout(async() => {
+                        msg.edit("Found![type: .txt] Reading and sending file contents...").then((msg) => {
+                            setTimeout(async() => {
+                                msg.edit(`Content:\n087 070 052 050 054 057`);
+                            }, 2000)
+                        });
+                    }, 5000)
+                });
+            }
+
+            else if(g_msg.includes("798209")){
+                msg.channel.send("Finding file and getting it...").then((msg) => {
+                    setTimeout(async() => {
+                        msg.edit("Found![type: .txt] Reading and sending file contents...").then((msg) => {
+                            setTimeout(async() => {
+                                msg.edit(`Content:\n ${msg.author} damn, go ahead, use WF4007`);
+                            }, 2000)
+                        });
+                    }, 5000)
+                });
             }
 
             else if(g_msg.includes("980734")){
@@ -569,7 +718,7 @@ client.on('message', async(msg) => {
             else if(g_msg.includes("999999")){
                 msg.channel.send("Finding achievement and getting it...(you probs already got it lol)").then(() => {
                     setTimeout(async() => {
-                        msg.author.send("Achievement Unlocked! (3 of 9)\nGood ol' 9's comin' in clutch!");
+                        msg.author.send("Achievement Unlocked! (3 of 13)\nGood ol' 9's comin' in clutch!");
                     }, 1000)
                 });
             }
@@ -577,14 +726,14 @@ client.on('message', async(msg) => {
             else if(g_msg.includes("69420")){
                 msg.channel.send("Findin- nice.").then(() => {
                     setTimeout(async() => {
-                        msg.author.send("Achievement Unlocked! (5 of 9)\n;)) getfile kinda sus");
+                        msg.author.send("Achievement Unlocked! (5 of 13)\n;)) getfile kinda sus");
                     }, 1000)
                 });
             }
             else if(g_msg.includes("435781")){
                 msg.channel.send("Findin- oh.").then(() => {
                     setTimeout(async() => {
-                        msg.author.send("Achievement Unlocked! (6 of 9)\nNice Try but no.");
+                        msg.author.send("Achievement Unlocked! (6 of 13)\nNice Try but no.");
                     }, 1000)
                 });
             }
@@ -612,11 +761,24 @@ client.on('message', async(msg) => {
             else if (l_msg.includes("code.git")){
                 msg.channel.send("Please wait till I find something.").then((msg) => {
                     setTimeout(async() => {
+                        msg.delete();
                         let link_em = new Discord.MessageEmbed()
                         .setColor("#58c9d1")
                         .setTitle("Found!")
                         .addField("Link:", "[Le link](https://github.com/Jonahmadich/codefiles)", false)
-                        msg.edit(link_em);
+                        msg.channel.send(link_em);
+                    }, 3000)
+                });
+            }
+            else if(l_msg.includes("succinic acid")){
+                msg.channel.send("Please wait till I find something.").then((msg) => {
+                    setTimeout(async() => {
+                        msg.delete();
+                        let link_em2 = new Discord.MessageEmbed()
+                        .setColor("#58c9d1")
+                        .setTitle("Found!")
+                        .addField("Link:", "[Le link](https://ichef.bbci.co.uk/news/1024/media/images/64471000/jpg/_64471712_walt_note624_disney.jpg)", false)
+                        msg.channel.send(link_em2);
                     }, 3000)
                 });
             }
