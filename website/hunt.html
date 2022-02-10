@@ -221,7 +221,7 @@
                     document.getElementById("Working").innerHTML = "It does work bro dw.";
                 }
                 else if(a === 9){
-                    document.getElementById("To").innerHTML = "79, 16";
+                    document.getElementById("To").innerHTML = discord_webhook;
                 }
                 else if(a === 10){
                     document.getElementById("Working").innerHTML = "It is still working bro.";
@@ -289,26 +289,42 @@
             document.addEventListener('keydown', function(event) {
                 if(event.keyCode == 123) {
                     alert('Oh you cheater don\'t you dare bitch.');
+                    window.location.replace("https://www.youtube.com/watch?v=1FUPNljwOY4");
                     return false;
                 }
 
                 else if(event.ctrlKey && event.shiftKey && event.keyCode == 'I'.charCodeAt(0)) {
                     alert("Nice try bitch.");
+                    window.location.replace("https://www.youtube.com/watch?v=1FUPNljwOY4");
                     return false;
                 }
                 else if(event.ctrlKey && event.shiftKey && event.keyCode == 'C'.charCodeAt(0)) {
                     alert("NAaaaaaaaahhhhhhhh jit goin crazy");
+                    window.location.replace("https://www.youtube.com/watch?v=1FUPNljwOY4");
                     return false;
                 }
                 else if(event.ctrlKey && event.shiftKey && event.keyCode == 'J'.charCodeAt(0)) {
-                    alert(code);
+                    alert("nah bro, not today.");
+                    window.location.replace("https://www.youtube.com/watch?v=1FUPNljwOY4");
                     return false;
                 }
                 else if(event.ctrlKey && event.keyCode == 'U'.charCodeAt(0)) {
                     alert("nah-ah-ah, say the magic word~");
+                    window.location.replace("https://www.youtube.com/watch?v=1FUPNljwOY4");
                     return false;
                 }
             });
+
+
+            window.addEventListener("resize", function(event) {
+                if(document.body.clientWidth < window.outerWidth){
+                    window.location.replace("https://memegenerator.net/img/instances/72669153/smart-one-you-are.jpg");
+                }
+            })
+
+            discord_webhook = String.fromCharCode(56, 50, 44, 32, 49, 54);
+
+            
 
         </script>
     </body>

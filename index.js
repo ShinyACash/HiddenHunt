@@ -253,9 +253,7 @@ client.on('message', async(msg) => {
                                                                     msg.edit("Core 3 destroyed. Gone, reduced to atoms.").then((msg) => {
                                                                         setTimeout(async() => {
                                                                             msg.channel.send("https://tenor.com/view/thanos-infinity-gauntlet-snap-finger-snap-gif-12502580");
-                                                                            msg.channel.send({
-                                                                                files: ['./website/hunt.html' ]
-                                                                            })
+                                                                            msg.channel.send("[Le website](https://shinyacash.github.io/hiddenhuntweb/)");
                                                                             msg.channel.send("Maybe try and use this? 'Use the first two as code and second two as the x'th click'")
                                                                         }, 100)
                                                                     });
@@ -576,7 +574,7 @@ client.on('message', async(msg) => {
                 
             }
 
-            else if(g_msg.includes("799841")){
+            else if(g_msg.includes("829841")){
                 msg.channel.send("Finding file and getting it...").then((msg) => {
                     setTimeout(async() => {
                         msg.edit("Found![type: .txt] Reading and sending file contents...").then((msg) => {
@@ -588,7 +586,7 @@ client.on('message', async(msg) => {
                 });
             }
 
-            else if(g_msg.includes("798209")){
+            else if(g_msg.includes("828209")){
                 msg.channel.send("Finding file and getting it...").then((msg) => {
                     setTimeout(async() => {
                         msg.edit("Found![type: .txt] Reading and sending file contents...").then((msg) => {
