@@ -495,8 +495,8 @@ client.on('message', async(msg) => {
                 else if(s_msg.includes("Derinkuyu") || s_msg.includes("derinkuyu")){
                     msg.channel.send("Damn mr./ms. worldwide. here's your two numbers `82`");
                 }
-                else if(s_msg.includes("grove street") || s_msg.includes("Grove")){
-                    msg.channel.includes("HOME, at least it was before cj fucked up 5 yee's ago. welp anyway, what's the game-making dare called?");
+                else if(s_msg.includes("Melvin Harris") || s_msg.includes("melvin")){
+                    msg.channel.includes("BIG SMOKE! HOMIE welp anyway, what's the game-making dare called?");
                 }
                 else if(s_msg.includes("Ludum") || s_msg.includes("ludum")){
                     msg.channel.includes("lol that must have taken time. welp which was minecraft in?");
@@ -574,7 +574,7 @@ client.on('message', async(msg) => {
                 
             }
 
-            else if(g_msg.includes("829841")){
+            else if(g_msg.includes("739841")){
                 msg.channel.send("Finding file and getting it...").then((msg) => {
                     setTimeout(async() => {
                         msg.edit("Found![type: .txt] Reading and sending file contents...").then((msg) => {
@@ -586,7 +586,7 @@ client.on('message', async(msg) => {
                 });
             }
 
-            else if(g_msg.includes("828209")){
+            else if(g_msg.includes("738209")){
                 msg.channel.send("Finding file and getting it...").then((msg) => {
                     setTimeout(async() => {
                         msg.edit("Found![type: .txt] Reading and sending file contents...").then((msg) => {
